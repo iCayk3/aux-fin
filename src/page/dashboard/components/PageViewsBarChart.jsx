@@ -18,7 +18,7 @@ export default function PageViewsBarChart() {
     <Card variant="outlined" sx={{ width: '100%' }}>
       <CardContent>
         <Typography component="h2" variant="subtitle2" gutterBottom>
-          Balanço bimestral
+          Fluxo de cobrança
         </Typography>
         <Stack sx={{ justifyContent: 'space-between' }}>
           <Stack
@@ -30,12 +30,12 @@ export default function PageViewsBarChart() {
             }}
           >
             <Typography variant="h4" component="p">
-              1.3M
+              R$ 3.299,56
             </Typography>
-            <Chip size="small" color="error" label="-8%" />
+            <Chip size="small" color="success" label="+8%" />
           </Stack>
           <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-            Balanço dos ultimos 6 meses
+            Debito regularizado
           </Typography>
         </Stack>
         <BarChart
@@ -45,7 +45,7 @@ export default function PageViewsBarChart() {
             {
               scaleType: 'band',
               categoryGapRatio: 0.5,
-              data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+              data: ['Cob. Interna', 'Cob. agendada', 'Neg. Debitos', 'N. Localizado', 'Ret. Inadiplencia', 'Retirada', 'Deb. Regulizado'],
               height: 24,
             },
           ]}
@@ -54,21 +54,21 @@ export default function PageViewsBarChart() {
             {
               id: 'page-views',
               label: 'Faturamento',
-              data: [458657.98, 488657.14, 418657.15, 438657.15, 468657.15, 498657.15, 518657.15],
+              data: [56, 33, 16, 3, 2, 1, 44],
               stack: 'A',
             },
-            {
-              id: 'downloads',
-              label: 'Recebidos',
-              data: [358657.98, 388657.14, 218657.15, 418657.15, 418657.15, 428657.15, 488657.15],
-              stack: 'A',
-            },
-            {
-              id: 'conversions',
-              label: 'A receber',
-              data: [4051, 2275, 3129, 4693, 3904, 2038, 2275],
-              stack: 'A',
-            },
+            // {
+            //   id: 'downloads',
+            //   label: 'Recebidos',
+            //   data: [358657.98, 388657.14, 218657.15, 418657.15, 418657.15, 428657.15, 488657.15],
+            //   stack: 'A',
+            // },
+            // {
+            //   id: 'conversions',
+            //   label: 'A receber',
+            //   data: [4051, 2275, 3129, 4693, 3904, 2038, 2275],
+            //   stack: 'A',
+            // },
           ]}
           height={250}
           margin={{ left: 0, right: 0, top: 20, bottom: 0 }}
