@@ -11,7 +11,7 @@ import { areaElementClasses } from '@mui/x-charts/LineChart';
 
 function getDaysInMonth(month, year) {
   const date = new Date(year, month, 0);
-  const monthName = date.toLocaleDateString('en-US', {
+  const monthName = date.toLocaleDateString('pt-BR', {
     month: 'short',
   });
   const daysInMonth = date.getDate();
@@ -42,7 +42,7 @@ AreaGradient.propTypes = {
 
 function StatCard({ title, value, interval, trend, data }) {
   const theme = useTheme();
-  const daysInWeek = getDaysInMonth(4, 2024);
+  const daysInWeek = getDaysInMonth(2, 2026);
 
   const trendColors = {
     up:
